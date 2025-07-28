@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@custom-variant hover (&:hover);
+
+@theme {
+  --color-cyan: hsl(180, 66%, 49%);
+  --color-cyanLight: hsl(180, 66%, 69%);
+  --color-darkViolet: hsl(257, 27%, 26%);
+  --color-red: hsl(0, 87%, 67%);
+  --color-grayishViolet: hsl(257, 7%, 63%);
+  --color-veryDarkBlue: hsl(255, 11%, 22%);
+  --color-veryDarkViolet: hsl(260, 8%, 14%);
+}
+@theme {
+  --font-sans: "Poppins", "sans-serif";
+}
+@theme {
+  --spacing-180: 32rem;
+}
+
+/* custom hamburger menu button */
+.hamburger {
+  cursor: pointer;
+  position: relative;
+  height: 24px;
+  width: 24px;
+  transition: all 0.25s;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #9c9aa6;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger .hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger .hamburger-bottom {
+  transform: translateY(14px);
+}
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  transition: all 0.5s;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+
+/* Custom Error message and its related things */
+.error .input-link {
+  @apply border-2 border-red-500;
+}
+.error .error-message {
+  display: block;
+}
+
+/* hover for the image address */
+.ficon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(70%) contrast(100%);
+}
