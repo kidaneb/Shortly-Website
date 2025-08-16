@@ -11,7 +11,7 @@
   --color-veryDarkViolet: hsl(260, 8%, 14%);
 }
 @theme {
-  --font-sans: "Poppins", "sans-serif";
+  --font-sans: "Poppins", sans-serif;
 }
 @theme {
   --spacing-180: 32rem;
